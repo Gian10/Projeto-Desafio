@@ -1,0 +1,46 @@
+﻿
+@model BackEnd.Models.AgendamentoManutencao
+
+
+@section css {
+    <link rel="stylesheet" href="~/css/user.css" />
+}
+
+<h1>CADASTRO DE AGENDAMENTO DE MANUTENÇÃO</h1>
+<hr />
+
+@using (Html.BeginForm("Create", "AgendamentoManutencao", FormMethod.Post))
+{
+
+<div class="form-row justify-content-center">
+    <div class="form-group col-md-3" style="float: left; width: 65%; text-align: center;">
+        <strong>@Html.Label("Data do Agendamento")</strong>
+        @Html.TextBoxFor(x => x.DataManutencao, "{0:yyyy-MM-dd}", new { @class = "form-control", @type = "date" })
+    </div>
+    <div class="form-group col-md-3" style="float: left; width: 65%; text-align: center;">
+        <strong> @Html.Label("Placa do Veículo")</strong>
+        @Html.TextBoxFor(x => x.PlacaVeiculo, new { @class = "form-control" })
+    </div>
+    <div class="form-group col-md-3" style="float: left; width: 65%; text-align: center;">
+        <strong>@Html.Label("Km para a Manutenção")</strong>
+        @Html.TextBoxFor(x => x.KmServico, new { @class = "form-control" })
+    </div>
+</div>
+
+    <div class="form-row justify-content-center">
+
+        <div class="form-group col-md-3" style="float: left; width: 65%; text-align: center;">
+            <strong>@Html.Label("Serviço da Manutenção")</strong>
+            @Html.TextAreaFor(x => x.Servico, new { @class = "form-control", @rows = "10", @cols = "40" })
+        </div>
+       
+    </div>
+
+    <hr />
+    <div class="form-row justify-content-center">
+        <div class="form-group col-md-3">
+            <input type="submit" value="SALVAR AGENDAMENTO" class="btn btn-primary" />
+        </div>
+    </div>
+
+}

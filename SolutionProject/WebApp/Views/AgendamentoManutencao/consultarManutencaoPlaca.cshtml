@@ -1,0 +1,44 @@
+﻿@model IEnumerable<BackEnd.Models.AgendamentoManutencao>
+
+
+@section css {
+    <link rel="stylesheet" href="~/css/user.css" />
+}
+
+<h1>CONSULTAR PROXÍMA MANUTENÇÃO POR KM RODADOS</h1>
+<hr />
+
+@using (Html.BeginForm())
+{
+    <form class="form-horizontal" role="form">
+        <strong><label>PESQUISAR PELA PLACA: <input type="text" name="placa" /></label></strong>
+        <input type="submit" id="search" title="Placa" value="Pesquisar" />
+    </form><hr /><div class="container">
+        <table class="table table-bordered" id="veiculoTable">
+            <tr>
+                <th>Placa do Veículo</th>
+                <th>Km Rodado para o Serviço</th>
+                <th>Serviço</th>          
+            </tr>
+
+            @if (Model != null)
+            {
+
+
+
+            @foreach (var agendamento in Model)
+            {
+                <tr>
+                    <td>@agendamento.PlacaVeiculo</td>
+                    <td>@agendamento.KmServico</td>
+                    <td>@agendamento.Servico</td>
+                  
+                   
+                </tr>
+            }
+            }
+        </table>
+    </div>
+
+}
+

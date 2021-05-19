@@ -1,0 +1,59 @@
+﻿@model BackEnd.Models.Veiculo
+
+@section css {
+    <link rel="stylesheet" href="~/css/user.css" />
+}
+
+<h1>CADASTRO DE VEÍCULO</h1>
+<hr />
+
+@using (Html.BeginForm("Create", "Veiculo", FormMethod.Post))
+{
+
+    <div class="form-row justify-content-center">
+        <div class="form-group col-md-3" style="float: left; width: 65%; text-align: center;">
+            <strong>@Html.Label("Nome")</strong>
+            @Html.TextBoxFor(x => x.Nome, new { @class = "form-control" })
+        </div>
+        <div class="form-group col-md-3" style="float: left; width: 65%; text-align: center;">
+            <strong> @Html.Label("Cor")</strong>
+            @Html.TextBoxFor(x => x.Cor, new { @class = "form-control" })
+        </div>
+        <div class="form-group col-md-3" style="float: left; width: 65%; text-align: center;">
+            <strong>@Html.Label("Modelo")</strong>
+            @Html.TextBoxFor(x => x.Modelo, new { @class = "form-control" })
+        </div>
+    </div>
+
+    <div class="form-row justify-content-center">
+        <div class="form-group col-md-3" style="float: left; width: 65%; text-align: center;">
+            <strong>@Html.Label("Ano de Fabricacao")</strong>
+            @Html.TextBoxFor(x => x.AnoFabricacao, new { @class = "form-control" })
+        </div>
+        <div class="form-group col-md-3" style="float: left; width: 65%; text-align: center;">
+            <strong>@Html.Label("Placa")</strong>
+            @Html.TextBoxFor(x => x.Placa, new { @class = "form-control" })
+        </div>
+        <div class="form-group col-md-3" style="float: left; width: 65%; text-align: center;">
+            <strong>@Html.Label("Marca")</strong>
+            @Html.TextBoxFor(x => x.Marca, new { @class = "form-control" })
+        </div>
+    </div>
+    <hr />
+    <div class="form-row justify-content-center">
+        <div class="form-group col-md-3">
+            <input type="submit" value="SALVAR VEÍCULO" class="btn btn-primary" />
+        </div>
+    </div>
+
+    @if (ViewBag.Message != null)
+    {
+        <script type="text/javascript">
+                window.onload = function () {
+                    alert("@ViewBag.Message");
+                };
+        </script>
+    }
+
+}
+

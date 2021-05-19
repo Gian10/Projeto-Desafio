@@ -1,0 +1,49 @@
+﻿@model IEnumerable<BackEnd.Models.Veiculo>
+
+
+@section css {
+    <link rel="stylesheet" href="~/css/user.css" />
+}
+
+<h1>VEÍCULOS</h1>
+<hr />
+
+@Html.ActionLink("CADASTRAR VEÍCULO", "Create", "Veiculo", null, new { @class = "btn btn-primary" })
+<hr />
+
+<div class="container">
+    <table class="table table-bordered" id="veiculoTable">
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Cor</th>
+            <th>Modelo</th>
+            <th>Ano de Fabricação</th>
+            <th>Placa</th>
+            <th>Marca</th>
+            <th>Ações</th>
+        </tr>
+
+        @foreach (var veiculo in Model)
+        {
+
+            <tr>
+                <td>@veiculo.VeiculoId</td>
+                <td>@veiculo.Nome</td>
+                <td>@veiculo.Cor</td>
+                <td>@veiculo.Modelo</td>
+                <td>@veiculo.AnoFabricacao</td>
+                <td>@veiculo.Placa</td>
+                <td>@veiculo.Marca</td>
+                <td>
+                    @Html.ActionLink("Editar", "Edit", new { id = veiculo.VeiculoId })
+
+                    @Html.ActionLink("Excluir", "Delete", new { id = veiculo.VeiculoId },
+                       new { onClick = "return confirm('Deseja Excluir?');" })
+                </td>
+            </tr>
+
+        }
+       
+    </table>
+</div>

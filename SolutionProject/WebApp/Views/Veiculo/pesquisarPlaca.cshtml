@@ -1,0 +1,52 @@
+﻿@model BackEnd.Models.Veiculo
+
+@section css {
+    <link rel="stylesheet" href="~/css/user.css" />
+}
+
+<h1>PESQUISAR VEÍCULO PELA PLACA</h1>
+<hr />
+
+@using (Html.BeginForm())
+{
+<form class="form-horizontal" role="form">
+    <strong><label>PESQUISAR PELA PLACA: <input type="text" name="pesquisar" value="" /></label></strong>
+    <input type="submit" id="search" title="Pesquisar" value="Pesquisar" />
+</form>
+    <hr />
+    <div class="container">
+        <table class="table table-bordered" id="veiculoTable">
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>Cor</th>
+                <th>Modelo</th>
+                <th>Ano de Fabricação</th>
+                <th>Placa</th>
+                <th>Marca</th>
+            </tr>
+
+            @if (Model != null)
+            {
+                <tr>
+                    <td>@Model.VeiculoId</td>
+                    <td>@Model.Nome</td>
+                    <td>@Model.Cor</td>
+                    <td>@Model.Modelo</td>
+                    <td>@Model.AnoFabricacao</td>
+                    <td>@Model.Placa</td>
+                    <td>@Model.Marca</td>
+                </tr>
+            }
+        </table>
+        @if (ViewBag.Message != null)
+        {
+            <script type="text/javascript">
+                window.onload = function () {
+                    alert("@ViewBag.Message");
+                };
+            </script>
+        }
+    </div>
+
+}

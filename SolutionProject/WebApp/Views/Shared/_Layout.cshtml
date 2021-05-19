@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] Projeto de Veiculos</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+
+    
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+            <div class="container">
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1 justify-content-center">
+                        <li class="nav-item">
+                            @Html.ActionLink("Início", "Index", "Home", null, new { @class = "nav-link text-white" })
+                        </li>
+
+                        <li class="nav-item">
+                            @Html.ActionLink("Listar Veiculos", "Index", "Veiculo", null, new { @class = "nav-link text-white" })
+                        </li>
+
+                        <li class="nav-item">
+                            @Html.ActionLink("Cadastrar Veiculo", "Create", "Veiculo", null, new { @class = "nav-link text-white" })
+                        </li>
+
+                        <li class="nav-item">
+                            @Html.ActionLink("Pesquisar Placa", "PesquisarPlaca", "Veiculo", null, new { @class = "nav-link text-white" })
+                        </li>
+
+                        <li class="nav-item">
+                            @Html.ActionLink("Pesquisar Marca Fabricante", "PesquisarMarcaFabricante", "Veiculo", null, new { @class = "nav-link text-white" })
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+                                Manutenções
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+
+                                <li class="nav-item">
+                                    @Html.ActionLink("Registrar Manutenção", "Create", "RegistroManutencao", null, new { @class = "nav-link text-dark" })
+                                </li>
+
+                                <li>
+                                    @Html.ActionLink("Agendar Manutenção", "Create", "AgendamentoManutencao", null, new { @class = "nav-link text-dark" })
+                                </li>
+
+                                <li class="nav-item">
+                                    @Html.ActionLink("Consultar Proxímas Matutenções", "Index", "AgendamentoManutencao", null, new { @class = "nav-link text-dark" })
+                                </li>
+
+                                <li class="nav-item">
+                                    @Html.ActionLink("Consultar Manutenção por Km", "ConsultarManutencaoPlaca", "AgendamentoManutencao", null, new { @class = "nav-link text-dark" })
+                                </li>
+
+                            </ul>
+                        </li>
+
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2021 - Projeto de Veiculos 
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    
+
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+    @RenderSection("css", required: false)
+</body>
+</html>

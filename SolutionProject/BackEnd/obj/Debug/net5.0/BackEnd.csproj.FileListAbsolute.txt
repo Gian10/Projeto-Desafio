@@ -1,0 +1,15 @@
+C:\Users\gkarlos\source\repos\SolutionProject\BackEnd\bin\Debug\net5.0\BackEnd.deps.json
+C:\Users\gkarlos\source\repos\SolutionProject\BackEnd\bin\Debug\net5.0\BackEnd.runtimeconfig.json
+C:\Users\gkarlos\source\repos\SolutionProject\BackEnd\bin\Debug\net5.0\BackEnd.runtimeconfig.dev.json
+C:\Users\gkarlos\source\repos\SolutionProject\BackEnd\bin\Debug\net5.0\BackEnd.dll
+C:\Users\gkarlos\source\repos\SolutionProject\BackEnd\bin\Debug\net5.0\ref\BackEnd.dll
+C:\Users\gkarlos\source\repos\SolutionProject\BackEnd\bin\Debug\net5.0\BackEnd.pdb
+C:\Users\gkarlos\source\repos\SolutionProject\BackEnd\obj\Debug\net5.0\BackEnd.csprojAssemblyReference.cache
+C:\Users\gkarlos\source\repos\SolutionProject\BackEnd\obj\Debug\net5.0\BackEnd.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gkarlos\source\repos\SolutionProject\BackEnd\obj\Debug\net5.0\BackEnd.AssemblyInfoInputs.cache
+C:\Users\gkarlos\source\repos\SolutionProject\BackEnd\obj\Debug\net5.0\BackEnd.AssemblyInfo.cs
+C:\Users\gkarlos\source\repos\SolutionProject\BackEnd\obj\Debug\net5.0\BackEnd.csproj.CoreCompileInputs.cache
+C:\Users\gkarlos\source\repos\SolutionProject\BackEnd\obj\Debug\net5.0\BackEnd.dll
+C:\Users\gkarlos\source\repos\SolutionProject\BackEnd\obj\Debug\net5.0\ref\BackEnd.dll
+C:\Users\gkarlos\source\repos\SolutionProject\BackEnd\obj\Debug\net5.0\BackEnd.pdb
+C:\Users\gkarlos\source\repos\SolutionProject\BackEnd\obj\Debug\net5.0\BackEnd.genruntimeconfig.cache

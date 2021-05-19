@@ -1,0 +1,58 @@
+﻿@model IEnumerable<BackEnd.Models.Veiculo>
+
+
+
+@section css {
+    <link rel="stylesheet" href="~/css/user.css" />
+}
+
+
+<h1>PESQUISAR MARCA FABRICANTES</h1>
+<hr />
+
+@using (Html.BeginForm())
+{
+    <form class="form-horizontal" role="form">
+        <strong><label>PESQUISAR PELA MARCA DE FABRICANTE: <input type="text" name="marca" /></label></strong>
+        <input type="submit" id="search" title="Pesquisar" value="Pesquisar" />
+    </form><hr /><div class="container">
+        <table class="table table-bordered" id="veiculoTable">
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>Cor</th>
+                <th>Modelo</th>
+                <th>Ano de Fabricação</th>
+                <th>Placa</th>
+                <th>Marca</th>
+            </tr>
+            
+            @if (Model != null) { 
+
+                @foreach(var veiculos in Model)
+                {
+                <tr>
+                    <td>@veiculos.VeiculoId</td>
+                    <td>@veiculos.Nome</td>
+                    <td>@veiculos.Cor</td>
+                    <td>@veiculos.Modelo</td>
+                    <td>@veiculos.AnoFabricacao</td>
+                    <td>@veiculos.Placa</td>
+                    <td>@veiculos.Marca</td>
+                </tr>
+                }
+            }
+
+           
+        </table>
+        @if (ViewBag.Message != null)
+        {
+            <script type="text/javascript">
+                window.onload = function () {
+                    alert("@ViewBag.Message");
+                };
+            </script>
+        }
+    </div>
+
+}

@@ -1,0 +1,44 @@
+﻿@model IEnumerable<BackEnd.Models.AgendamentoManutencao>
+
+
+@section css {
+    <link rel="stylesheet" href="~/css/user.css" />
+}
+
+<h1>PROXÍMAS MANUTENÇÃOES AGENDADA</h1>
+<hr />
+
+
+
+@using (Html.BeginForm())
+{
+    
+    <div class="container">
+        <table class="table table-bordered" id="veiculoTable">
+            <tr>
+                <th>Id</th>
+                <th>Data Agendada</th>
+                <th>Placa do Veículo</th>
+                <th>Km Serviço</th>
+                <th>Serviço</th>
+            </tr>
+
+            @if (Model != null)
+            {
+                @foreach (var agendados in Model)
+                {
+                    <tr>
+                        <td>@agendados.AgendamentoManutencaoId</td>
+                        <td>@agendados.DataManutencao.ToString("dd/MM/yyyy")</td>
+                        <td>@agendados.PlacaVeiculo</td>
+                        <td>@agendados.KmServico</td>
+                        <td>@agendados.Servico</td>
+                    </tr>
+                }
+
+            }
+        </table>
+       
+    </div>
+
+}
