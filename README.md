@@ -24,12 +24,5 @@ O sistema deverá permitir ao usuário verificar com quantos quilômetros dever�
 O sistema deverá permitir ao usuário realizar o agendamento de manutenções por data.
 # 10 – Consultar manutenções agendadas
 O sistema deverá permitir ao usuário consultar as manutenções que estão próximas da data de execução. Nesta consulta o sistema deverá retornar as manutenções agendadas com 7 dias de antecedência da data de execução.
-Especificação Técnica
+# Especificação Técnica
 O sistema deverá priorizar o uso de ferramentas open source. Por isso deverá ser desenvolvido em.NET Core 5 utilizando a linguagem C#, utilizando o Entity Framework Core V5.0.5. Deverá ser utilizado o ASP.NET MVC para desenvolvimento da aplicação web. Para banco de dados utilizar o SQL Server Express 2019 ou versão compatível.
-Critérios de Avaliação
-O projeto será avaliado de acordo com a adesão aos seguintes critérios:
-1. Aderência ao escopo: Será avaliado quanto dos requisitos propostos foram desenvolvidos.
-2. Cumprimento do prazo de entrega: Serão avaliados os projetos entregues até a data 19/05/2021.
-3. Qualidade de código: Será avaliado a correta aplicação dos conceitos de Orientação a Objetos abordados nas aulas.
-Entrega
-O projeto deverá ser disponibilizado, até a data previamente citada, preferencialmente no GitHub.
